@@ -1,7 +1,7 @@
 import json
 import random
 from anytree import Node, RenderTree, AsciiStyle
-
+import time
 
 class TreeNode:
     def __init__(self, id, val=0, left=None, right=None):
@@ -117,7 +117,7 @@ def print_tree(root):
 if __name__ == "__main__":
     num_main_nodes = int(input("Введите количество узлов в основном дереве: "))  # Количество узлов в основном дереве
     num_sub_nodes = int(input("Введите количество узлов в поддереве: ")) # Количество узлов в поддереве
-
+    start = time.time()
 
 
     generate_input_files(num_main_nodes, num_sub_nodes)
@@ -136,3 +136,7 @@ if __name__ == "__main__":
     for i, match in enumerate(matches, 1):
         print(f"\nMatch {i}:")
         print_tree(match)
+
+    end = time.time()
+    print()
+    print('Time: ', end - start)
