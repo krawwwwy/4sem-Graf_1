@@ -120,7 +120,7 @@ if __name__ == "__main__":
     start = time.time()
 
 
-    generate_input_files(num_main_nodes, num_sub_nodes)
+    #generate_input_files(num_main_nodes, num_sub_nodes)
 
     main_tree = read_tree_from_file('main_tree.json')
     subtree = read_tree_from_file('subtree.json')
